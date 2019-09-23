@@ -20,13 +20,13 @@ In addition to a prepopulated menu of options, Select2 can dynamically create ne
 </div>
 
 ```
-<select class="form-control">
+<select class="js-single-tags form-control">
   <option selected="selected">orange</option>
   <option>white</option>
   <option>purple</option>
 </select>
 
-$(".js-example-tags").select2({
+$(".js-single-tags").select2({
   tags: true
 });
 ```
@@ -48,22 +48,24 @@ Tagging can also be used in multi-value select boxes. In the example below, we s
 </div>
 
 ```
-<select class="form-control" multiple="multiple">
+<select class="js-multiple-tags form-control" multiple="multiple">
   <option selected="selected">orange</option>
   <option>white</option>
   <option selected="selected">purple</option>
 </select>
-```
 
-<script type="text/javascript">
-
-$(".js-example-tags").select2({
+$(".js-multiple-tags").select2({
   tags: true
 });
-
-</script>
+```
 
 Try entering a value that isn't listed in the dropdown - you'll be able to add it as a new option!
+
+<script type="text/javascript">
+  $(".js-example-tags").select2({
+    tags: true
+  });
+</script>
 
 ## Automatic tokenization into tags
 
@@ -80,6 +82,14 @@ The separators that should be used when tokenizing can be specified using the `t
   </select>
 </p>
 </div>
+
+```
+  <select class="js-example-tokenizer form-control" multiple="multiple">
+    <option>red</option>
+    <option>blue</option>
+    <option>green</option>
+  </select>
+```
 
 <pre data-fill-from=".js-code-example-tokenizer"></pre>
 
